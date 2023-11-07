@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "cwd": "${workspaceRoot}",
+      "type": "cortex-debug",
+      "request": "launch",
+      "name": "openocd-launch",
+      "armToolchainPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin",
+      "gdbPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gdb.exe",
+      "interface": "swd",
+      "servertype": "openocd",
+      "configFiles": [
+        "C:/Users/zjjhg/Desktop/OpenOCD_V2.0.2/scripts/interface/atlink.cfg",
+        "C:/Users/zjjhg/Desktop/OpenOCD_V2.0.2/scripts/target/at32f403axx.cfg"
+      ],
+      "executable": "build/at32f403a_vscode_template.elf",
+      "svdFile": "project/misc/AT32F403Axx_v2.svd",
+      "runToEntryPoint": "main"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/zjjhg/Desktop/at32f403a_vscode_template/project/src",
+      "program": "c:/Users/zjjhg/Desktop/at32f403a_vscode_template/project/src/build/Debug/outDebug",
+      "MIMode": "lldb",
+      "miDebuggerPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

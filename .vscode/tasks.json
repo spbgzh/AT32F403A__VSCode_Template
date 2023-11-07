@@ -1,0 +1,40 @@
+{
+
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-j4"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "download code",
+            "type": "process",
+            "command": "openocd",
+            "args": [
+                "-f",
+                "C:/Users/zjjhg/Desktop/OpenOCD_V2.0.2/scripts/interface/jlink.cfg",
+                "-f",
+                "C:/Users/zjjhg/Desktop/OpenOCD_V2.0.2/scripts/target/at32f403axx.cfg",
+                "-c",
+                "program build/at32f403a_vscode_template.hex",
+                "-c",
+                "exit"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

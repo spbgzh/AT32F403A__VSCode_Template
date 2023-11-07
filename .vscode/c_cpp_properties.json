@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "name": "windows-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/arm-none-eabi/include",
+        "${workspaceFolder}/project/inc",
+        "${workspaceFolder}/project/board",
+        "${workspaceFolder}/libraries/cmsis/cm4/core_support",
+        "${workspaceFolder}/libraries/cmsis/cm4/device_support",
+        "${workspaceFolder}/libraries/drivers/inc",
+        "${workspaceFolder}"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE",
+        "AT_START_F403A_V1",
+        "AT32F403AVGT7",
+        "USE_STDPERIPH_DRIVER"
+      ],
+      "compilerPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe",
+      "cStandard": "gnu17",
+      "cppStandard": "gnu++14",
+      "intelliSenseMode": "windows-gcc-x64"
+    }
+  ],
+  "version": 4
+}

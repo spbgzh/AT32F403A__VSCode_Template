@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<software-distribution project="MinGW" home="http://mingw.org" issue="2020092100">
+
+  <!-- File: mingw32-ncurses.xml -->
+
+  <package-collection subsystem="mingw32">
+    <download-host uri="http://osdn.net/dl/mingw/%F" />
+
+    <package name="mingw32-ncurses" alias="ncurses">
+      <affiliate group="MinGW Contributed Applications" />
+
+      <description lang="en" title="The GNU new 'curses' terminal control library">
+        <paragraph>
+          The GNU ncurses (new curses) library is a free software implemenation
+          of Unix SysV-R4 curses, and more.  It uses terminfo format,  supports
+          pads, colour, multiple highlights, forms characters, and function-key
+          mapping,  and  incorporates all of the other SysV curses enhancements
+          to the original BSD curses.
+        </paragraph>
+        <paragraph>
+          The mingw32-ncurses package provides the documentation and programs
+          for the ncurses library.  The associated mingw32-libncurses package
+          provides the runtime library and related development files.
+        </paragraph>
+      </description>
+
+      <licence tarname="ncurses-%-mingw32-%-lic.tar.%" />
+      <source tarname="ncurses-%-mingw32-%-src.tar.%" />
+
+      <component class="bin">
+        <requires eq="libncurses-%-mingw32-%-dll-6.tar" />
+        <release tarname="ncurses-6.2-2-mingw32-bin.tar.xz" />
+        <release tarname="ncurses-6.2-1-mingw32-bin.tar.xz" />
+        <release tarname="ncurses-6.0-2-mingw32-bin.tar.lzma">
+          <download tarname="none" />
+        </release>
+        <release tarname="ncurses-6.0-1-mingw32-bin.tar.lzma">
+          <download tarname="none" />
+        </release>
+      </component>
+
+      <component class="doc">
+        <release tarname="ncurses-6.2-2-mingw32-doc.tar.xz" />
+        <release tarname="ncurses-6.2-1-mingw32-doc.tar.xz" />
+        <release tarname="ncurses-6.0-2-mingw32-doc.tar.lzma">
+          <download tarname="none" />
+        </release>
+        <release tarname="ncurses-6.0-1-mingw32-doc.tar.lzma">
+          <download tarname="none" />
+        </release>
+      </component>
+
+      <component class="man">
+        <affiliate group="MinGW Contributed Libraries" />
+        <release tarname="ncurses-6.2-2-mingw32-man.tar.xz" />
+        <release tarname="ncurses-6.2-1-mingw32-man.tar.xz" />
+      </component>
+
+      <component class="lic">
+        <affiliate group="MinGW Contributed Libraries" />
+        <release tarname="ncurses-6.2-2-mingw32-lic.tar.xz" />
+        <release tarname="ncurses-6.2-1-mingw32-lic.tar.xz" />
+        <release tarname="ncurses-6.0-2-mingw32-lic.tar.lzma">
+          <download tarname="none" />
+        </release>
+        <release tarname="ncurses-6.0-1-mingw32-lic.tar.lzma">
+          <download tarname="none" />
+        </release>
+      </component>
+    </package>
+
+    <package name="mingw32-libncurses" alias="libncurses">
+      <affiliate group="MinGW Contributed Libraries" />
+
+      <description lang="en" title="The GNU new 'curses' terminal control library">
+        <paragraph>
+          The GNU ncurses (new curses) library is a free software implemenation
+          of Unix SysV-R4 curses, and more.  It uses terminfo format,  supports
+          pads, colour, multiple highlights, forms characters, and function-key
+          mapping,  and  incorporates all of the other SysV curses enhancements
+          to the original BSD curses.
+        </paragraph>
+        <paragraph>
+          The  mingw32-libncurses  package  provides  the  runtime  library  and
+          related development files for ncurses.  The associated mingw32-ncurses
+          package provides the documentation and programs related to the library.
+        </paragraph>
+      </description>
+
+      <licence tarname="ncurses-%-mingw32-%-lic.tar.%" />
+      <source tarname="ncurses-%-mingw32-%-src.tar.%" />
+
+      <component class="dev">
+        <release tarname="libncurses-6.2-2-mingw32-dev.tar.xz" />
+        <release tarname="libncurses-6.2-1-mingw32-dev.tar.xz" />
+        <release tarname="libncurses-6.0-2-mingw32-dev.tar.lzma">
+          <download tarname="none" />
+        </release>
+        <release tarname="libncurses-6.0-1-mingw32-dev.tar.lzma">
+          <download tarname="none" />
+        </release>
+      </component>
+
+      <component class="dll">
+        <requires eq="libgcc-*-mingw32-*-dll-1.tar" />
+        <release tarname="libncurses-6.2-2-mingw32-dll-6.tar.xz" />
+        <release tarname="libncurses-6.2-1-mingw32-dll-6.tar.xz" />
+        <release tarname="libncurses-6.0-2-mingw32-dll-6.tar.lzma">
+          <download tarname="none" />
+        </release>
+      </component>
+    </package>
+
+    <package name="mingw32-terminfo" alias="terminfo">
+      <affiliate group="MinGW Contributed Libraries" />
+
+      <description lang="en" title="Terminal capability data base">
+        <paragraph>
+          Terminfo is a data base, describing terminals, which may be used
+          by screen-oriented programs such as nvi(1), and rogue(1), and by
+          libraries  such as curses(3x).  Terminfo describes terminals, in
+          terms of the set of capabilities which  they support, specifying
+          initialization  sequences,  padding  requirements,  and  how  to
+          perform screen operations.
+        </paragraph>
+      </description>
+
+      <licence tarname="ncurses-%-mingw32-%-lic.tar.%" />
+      <source tarname="ncurses-%-mingw32-%-src.tar.%" />
+
+      <component class="data">
+        <release tarname="terminfo-6.2-2-mingw32-data.tar.xz" />
+        <release tarname="terminfo-6.2-1-mingw32-data.tar.xz" />
+        <release tarname="terminfo-6.0-2-mingw32-data.tar.lzma">
+          <download tarname="none" />
+        </release>
+        <release tarname="terminfo-6.0-1-mingw32-data.tar.lzma">
+          <download tarname="none" />
+        </release>
+      </component>
+    </package>
+
+  </package-collection>
+</software-distribution>
+
+<!-- vim: set expandtab textwidth=80 tabstop=2 shiftwidth=2: -->
+<!-- vim: set fileformat=unix nocompatible: -->
